@@ -1,0 +1,228 @@
+  body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    
+  }
+  
+  .container {
+    margin: auto;
+    
+  }
+  
+  .lineone,
+  .linetwo {
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .c1 {
+    background-color: rgb(173, 52, 52);
+  }
+  
+  .c2 {
+    background-color: rgb(27, 107, 33);
+  }
+  
+  .c3 {
+    background-color: rgb(28, 75, 108);
+  }
+  
+  .c4 {
+    background-color: rgb(98, 28, 103);
+  }
+  
+  .color {
+    background-color: aliceblue;
+  }
+  
+  #btn {
+    padding: 1rem;
+    background-color: rgb(185, 132, 132);
+    border: 2px solid;
+    color: white;
+    margin: 0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #btn:hover {
+    background-color: rgb(155, 112, 112);
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  h3 {
+    margin-top: 1rem;
+    color: #555;
+  }
+  
+
+  .btn {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add a subtle shadow and border radius to the start button */
+  #btn {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3rem;
+  }
+  
+  /* Add a pulsating animation to the start button */
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #btn:hover {
+    animation: pulsate 1s infinite;
+  }
+  
+  /* Add a subtle glow effect to the game buttons on correct sequence */
+  .color {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .color.correct {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  }
+  
+  /* Add a shake animation on wrong answer */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Apply the shake animation to the whole container on wrong answer */
+  .container.wrong-answer {
+    animation: shake 0.5s;
+  }
+  
+  
+  h2 {
+    color: #333;
+  }
+  
+  h3 {
+    margin-top: 1rem;
+    color: #555;
+    transition: opacity 0.5s;
+  }
+  
+  .container {
+    margin: auto;
+    width: 60%;
+  }
+  
+  /* .btn {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1.5rem;
+    border: 8px solid transparent;
+    margin: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+    */
+  #btn {
+    padding: 0.5rem;
+    background-color: #3498db;
+    border: 2px solid #2980b9;
+    color: white;
+    margin: 0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+   
+  #btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .color {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .color.correct {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  }
+  
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #btn {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .color {
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .color.correct {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  }
+  
+  .message {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .game-board {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
