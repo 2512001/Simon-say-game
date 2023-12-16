@@ -13,16 +13,10 @@
   }
   
   .container {
+
     margin: auto;
     
   }
-  
-  .lineone,
-  .linetwo {
-    display: flex;
-    justify-content: center;
-  }
-  
   
   .c1 {
     background-color: rgb(173, 52, 52);
@@ -57,10 +51,7 @@
   
   #btn:hover {
     background-color: rgb(155, 112, 112);
-  }
-  
-  .btn:hover {
-    transform: scale(1.05);
+    
   }
   
   h2 {
@@ -73,9 +64,6 @@
   }
   
 
-  .btn {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
   
   /* Add a subtle shadow and border radius to the start button */
   #btn {
@@ -138,59 +126,30 @@
   .container {
     margin: auto;
     width: 60%;
-  }
-  
-  /* .btn {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 1.5rem;
-    border: 8px solid transparent;
-    margin: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-    */
-  #btn {
-    padding: 0.5rem;
-    background-color: #3498db;
-    border: 2px solid #2980b9;
-    color: white;
-    margin: 0.3rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-   
-  #btn:hover {
-    background-color: #2980b9;
-  }
-  
-  .color {
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  .color.correct {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
-  }
-  
-  
-  .container {
     text-align: center;
   }
+
+
   
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
+  } 
   
   .btn {
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     border-radius: 10px;
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
   
   #btn {
     padding: 10px;
@@ -225,4 +184,44 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  @media screen  and (max-width : 600px){
+
+    
+  .container {
+    margin: auto;
+    width: 100%;
+    font-size: larger;
+  }
   
+  .btn {
+
+    width: 9rem;
+    height: 9rem;
+    border-radius: 8px;
+    margin: 6px;
+   
+   
+  }
+  
+  }
+  
+  @media screen  and (max-width : 312px){
+
+    
+    .container {
+      margin: auto;
+      width: 100%;
+      font-size: small;
+    }
+    
+    .btn {
+  
+      width: 7rem;
+      height: 7rem;
+      border-radius: 6px;
+      margin: 3px;
+     
+     
+    }
+    
+    }
