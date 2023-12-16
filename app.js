@@ -9,9 +9,12 @@ let heighestscore = 0;
 let hs =document.getElementById("highScoreMessage");
 let startbnt1 = document.getElementById("btn");
 let startbnt2 = false;
+
 function start() {
-  heading3.style.color = ""; // Reset heading color (assuming you want to reset it)
+  heading3.style.color = ""; 
   document.body.style.backgroundColor = "";
+  
+
 }
 btn.addEventListener("click", function () {
   startbnt = true;
@@ -20,6 +23,7 @@ btn.addEventListener("click", function () {
   setTimeout(() => {
     if (!started) {
       started = true;
+      hs.style.display = "none";
       console.log("Game is started");
       levelup();
     }
