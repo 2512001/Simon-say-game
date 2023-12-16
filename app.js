@@ -5,6 +5,8 @@ let gamesequence = [];
 let usersequence = [];
 let heading3 = document.querySelector("h3");
 let score = 0;
+let heighestscore = 0;
+let hs =document.getElementById("highScoreMessage");
 let startbnt1 = document.getElementById("btn");
 let startbnt2 = false;
 function start() {
@@ -28,6 +30,10 @@ function levelup() {
   usersequence = [];
   level++;
   score += 2;
+  if(score > heighestscore)
+  {
+    heighestscore = score ;
+  }
   heading3.innerHTML = `Level ${level}`;
   let rndcolor = Math.floor(Math.random() * 4);
   let selectedColor = colors[rndcolor];
@@ -46,6 +52,8 @@ function checkans(indx) {
   } else {
     console.log("Wrong answer");
     heading3.innerHTML = `Game over! Your score is ${score}. Press any key to start the game.`;
+    hs.style.display = "inline-block";
+    hs.innerHTML =`Heighest Score is : ${heighestscore}`;
     restart();
   }
 }
