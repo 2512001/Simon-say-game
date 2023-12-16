@@ -33,10 +33,9 @@ btn.addEventListener("click", function () {
 function levelup() {
   usersequence = [];
   level++;
-  score += 2;
-  if(score > heighestscore)
+  if(level>1)
   {
-    heighestscore = score ;
+  score += 2;
   }
   heading3.innerHTML = `Level ${level}`;
   let rndcolor = Math.floor(Math.random() * 4);
@@ -57,7 +56,6 @@ function checkans(indx) {
     console.log("Wrong answer");
     heading3.innerHTML = `Game over! Your score is ${score}. Press any key to start the game.`;
     hs.style.display = "inline-block";
-    hs.innerHTML =`Heighest Score is : ${heighestscore}`;
     restart();
   }
 }
@@ -84,6 +82,12 @@ for (btn of allbtn) {
 }
 
 function restart() {
+  if(score > heighestscore)
+  {
+    heighestscore = score ;
+    console.log("you broke heighest record");
+  }
+  hs.innerHTML =`Heighest Score is : ${heighestscore}`;
   level = 0;
   score = 0;
   gamesequence = [];
