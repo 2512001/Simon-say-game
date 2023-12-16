@@ -1,31 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon Says Game</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<!-- or -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<!-- or -->
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <!-- Add Locomotive Scroll link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css" />
 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Set a light background color */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        #hero-section {
+            background-image: url('./image/20944395.jpg'); /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            margin: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+            position: relative; /* Added to ensure content is above the background */
+            z-index: 1; /* Ensure the content is above the background */
+        }
+
+        #hero-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #main-content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease-out forwards;
+            position: relative; /* Added to ensure content is above the background */
+            z-index: 1; /* Ensure the content is above the background */
+        }
+
+        #play-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        #play-button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        #instructions {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styling */
+        @media only screen and (max-width: 600px) {
+            #hero-section {
+                padding: 50px 20px;
+            }
+
+            #hero-section h1 {
+                font-size: 2em;
+            }
+
+            #main-content {
+                padding: 15px;
+            }
+
+            #play-button {
+                padding: 12px 24px;
+                font-size: 1em;
+            }
+        }
+        #play-now-button{
+          text-decoration: none;
+          padding: 0.5rem;
+          font-weight: 700;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <h2 style="color: rgba(255, 255, 255, 0.594);">Simon Says Game</h2>
-    <br>
-    <button id="btn">Start Game</button>
-    <h3>Press any key to start the game..</h3>
-    &nbsp;
-    <div class="game-board">
-      <div class="btn c1" id="c1"></div>
-      <div class="btn c2" id="c2"></div>
-      <div class="btn c3" id="c3"></div>
-      <div class="btn c4" id="c4"></div>
+<body data-scroll-container>
+    <header>
+        <h1>Welcome to Simon Says Game</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="hero-section">
+        <h1>Challenge your memory with Simon Says Game</h1>
+        <p>Follow the sequence, test your memory, and see how far you can go!</p>
+        <a href="main.html" id="play-now-button">Play Now</a>
     </div>
-  </div>
-  <script src="app.js"></script>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <p>Ready to play?</p>
+        <a href="main.html" id="play-button">Play Now</a>
+
+        <div id="instructions">
+            <h2>How to Play:</h2>
+            <p>Watch and memorize the sequence of colors and sounds. Repeat the sequence correctly to advance to the next level.</p>
+            <p>Are you up for the challenge? Start playing now!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Simon Says Game. All rights reserved.</p>
+    </footer>
+
+    <!-- Add Locomotive Scroll script -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll"></script>
+    <script>
+        // Initialize Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            multiplier: 0.8
+        });
+    </script>
 </body>
 </html>
